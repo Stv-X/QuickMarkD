@@ -11,6 +11,11 @@
 		AA943A262A11CF9F001265BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA943A252A11CF9F001265BE /* ContentView.swift */; };
 		AA943A282A11CFA0001265BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA943A272A11CFA0001265BE /* Assets.xcassets */; };
 		AA943A2C2A11CFA0001265BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA943A2B2A11CFA0001265BE /* Preview Assets.xcassets */; };
+		AA943A342A11D202001265BE /* OpenAIStreamingCompletions in Frameworks */ = {isa = PBXBuildFile; productRef = AA943A332A11D202001265BE /* OpenAIStreamingCompletions */; };
+		AA943A372A11D23B001265BE /* MarkdownText in Frameworks */ = {isa = PBXBuildFile; productRef = AA943A362A11D23B001265BE /* MarkdownText */; };
+		AA943A392A11D249001265BE /* MarkdownPreviewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA943A382A11D249001265BE /* MarkdownPreviewSheet.swift */; };
+		AA943A3B2A11D2A1001265BE /* MarkdownConvertionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA943A3A2A11D2A1001265BE /* MarkdownConvertionView.swift */; };
+		AA943A3D2A11DADC001265BE /* OpenAISettingsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA943A3C2A11DADC001265BE /* OpenAISettingsModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,9 @@
 		AA943A272A11CFA0001265BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA943A292A11CFA0001265BE /* QuickMarkD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickMarkD.entitlements; sourceTree = "<group>"; };
 		AA943A2B2A11CFA0001265BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA943A382A11D249001265BE /* MarkdownPreviewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewSheet.swift; sourceTree = "<group>"; };
+		AA943A3A2A11D2A1001265BE /* MarkdownConvertionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownConvertionView.swift; sourceTree = "<group>"; };
+		AA943A3C2A11DADC001265BE /* OpenAISettingsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISettingsModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA943A372A11D23B001265BE /* MarkdownText in Frameworks */,
+				AA943A342A11D202001265BE /* OpenAIStreamingCompletions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,9 @@
 			children = (
 				AA943A232A11CF9F001265BE /* QuickMarkDApp.swift */,
 				AA943A252A11CF9F001265BE /* ContentView.swift */,
+				AA943A3A2A11D2A1001265BE /* MarkdownConvertionView.swift */,
+				AA943A3C2A11DADC001265BE /* OpenAISettingsModal.swift */,
+				AA943A382A11D249001265BE /* MarkdownPreviewSheet.swift */,
 				AA943A272A11CFA0001265BE /* Assets.xcassets */,
 				AA943A292A11CFA0001265BE /* QuickMarkD.entitlements */,
 				AA943A2A2A11CFA0001265BE /* Preview Content */,
@@ -85,6 +98,10 @@
 			dependencies = (
 			);
 			name = QuickMarkD;
+			packageProductDependencies = (
+				AA943A332A11D202001265BE /* OpenAIStreamingCompletions */,
+				AA943A362A11D23B001265BE /* MarkdownText */,
+			);
 			productName = QuickMarkD;
 			productReference = AA943A202A11CF9F001265BE /* QuickMarkD.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +130,10 @@
 				Base,
 			);
 			mainGroup = AA943A172A11CF9F001265BE;
+			packageReferences = (
+				AA943A322A11D202001265BE /* XCRemoteSwiftPackageReference "openai-streaming-completions-swift" */,
+				AA943A352A11D23B001265BE /* XCRemoteSwiftPackageReference "MarkdownText" */,
+			);
 			productRefGroup = AA943A212A11CF9F001265BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA943A3D2A11DADC001265BE /* OpenAISettingsModal.swift in Sources */,
+				AA943A3B2A11D2A1001265BE /* MarkdownConvertionView.swift in Sources */,
 				AA943A262A11CF9F001265BE /* ContentView.swift in Sources */,
 				AA943A242A11CF9F001265BE /* QuickMarkDApp.swift in Sources */,
+				AA943A392A11D249001265BE /* MarkdownPreviewSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +378,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA943A322A11D202001265BE /* XCRemoteSwiftPackageReference "openai-streaming-completions-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stv-x/openai-streaming-completions-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		AA943A352A11D23B001265BE /* XCRemoteSwiftPackageReference "MarkdownText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shaps80/MarkdownText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA943A332A11D202001265BE /* OpenAIStreamingCompletions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA943A322A11D202001265BE /* XCRemoteSwiftPackageReference "openai-streaming-completions-swift" */;
+			productName = OpenAIStreamingCompletions;
+		};
+		AA943A362A11D23B001265BE /* MarkdownText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA943A352A11D23B001265BE /* XCRemoteSwiftPackageReference "MarkdownText" */;
+			productName = MarkdownText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA943A182A11CF9F001265BE /* Project object */;
 }
